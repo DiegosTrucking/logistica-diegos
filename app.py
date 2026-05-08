@@ -187,3 +187,19 @@ with tab3:
         file_name='gastos_diego.csv',
         mime='text/csv',
     )
+# --- SECCIÓN DE RESPALDO (BOTÓN DE DESCARGA) ---
+st.sidebar.markdown("---")
+st.sidebar.subheader("Seguridad de Datos")
+
+# Leemos el archivo de la base de datos para ofrecerlo como descarga
+if os.path.exists(DB_NAME):
+    with open(DB_NAME, "rb") as f:
+        db_binary = f.read()
+    
+    st.sidebar.download_button(
+        label="📥 Descargar Respaldo (.db)",
+        data=db_binary,
+        file_name=f"Respaldo_Diegos_{date.today()}.db",
+        mime="application/x-sqlite3",
+        help="Haz clic aquí para guardar una copia de toda la información en tu dispositivo."
+    )
