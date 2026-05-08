@@ -3,8 +3,20 @@ import sqlite3
 import pandas as pd
 from datetime import date
 
-# --- CONFIGURACIÓN DE LA PÁGINA WEB ---
-st.set_page_config(page_title="Diegos Trucking App", page_icon="🚛", layout="centered")
+# --- CONFIGURACIÓN DE LA PÁGINA ---
+# Esto pone el icono en la pestaña del navegador
+st.set_page_config(
+    page_title="Diegos Trucking", 
+    page_icon="logo.png", # <--- Aquí va tu logo para la pestaña
+    layout="centered"
+)
+
+# --- LOGO EN LA PANTALLA PRINCIPAL ---
+# Esto pone tu logo grande arriba del título
+if os.path.exists("logo.png"):
+    st.image("logo.png", width=200) # Puedes ajustar el tamaño aquí
+
+st.title("🚛 Diegos Trucking - Gestión en la Nube")
 
 # Para esta fase de prueba en tu computadora, seguiremos usando tu misma base de datos.
 DB_NAME = "Logistica_Diegos_Trucking.db"
