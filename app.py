@@ -17,7 +17,7 @@ st.set_page_config(
 if os.path.exists("logo.png"):
     st.image("logo.png", width=200) # Puedes ajustar el tamaño aquí
 
-st.title("🚛 Diegos Trucking - Gestión en la Nube")
+
 
 # Para esta fase de prueba en tu computadora, seguiremos usando tu misma base de datos.
 DB_NAME = "Logistica_Diegos_Trucking.db"
