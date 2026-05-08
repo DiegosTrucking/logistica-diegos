@@ -187,7 +187,22 @@ with tab3:
         file_name='gastos_diego.csv',
         mime='text/csv',
     )
-# --- SECCIÓN DE RESPALDO (BOTÓN DE DESCARGA) ---
+# --- DIRECTORIO DE FLOTA (PLACAS) ---
+st.sidebar.markdown("---")
+st.sidebar.subheader("🚛 Directorio de Flota")
+
+# Creamos una tabla rápida con la información de tu foto
+data_unidades = {
+    "Unidad": ["1", "2", "3", "4"],
+    "Placas": ["90BM4W", "93BM4W", "92BM4W", "91BM4W"]
+}
+df_unidades = pd.DataFrame(data_unidades)
+
+# La mostramos en la barra lateral para que siempre esté a la vista
+st.sidebar.table(df_unidades)
+
+# --- SECCIÓN DE RESPALDO (LO QUE YA TENÍAS) ---
+# ... aquí sigue el código del botón de descarga que pusimos antes ...# --- SECCIÓN DE RESPALDO (BOTÓN DE DESCARGA) ---
 st.sidebar.markdown("---")
 st.sidebar.subheader("Seguridad de Datos")
 
