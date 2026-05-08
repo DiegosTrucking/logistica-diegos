@@ -2,6 +2,7 @@ import streamlit as st
 import sqlite3
 import pandas as pd
 from datetime import date
+import os
 
 # --- CONFIGURACIÓN DE LA PÁGINA ---
 # Esto pone el icono en la pestaña del navegador
